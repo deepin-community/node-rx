@@ -1,0 +1,46 @@
+Description: Get rid of qunit, jscs, jshint and watch grunt stuff.
+Forwarded: not-needed
+Author: Paolo Greppi <paolo.greppi@libpf.com>
+
+Index: node-rx/Gruntfile.js
+===================================================================
+--- node-rx.orig/Gruntfile.js
++++ node-rx/Gruntfile.js
+@@ -2364,29 +2364,6 @@ module.exports = function (grunt) {
+           files: {'dist/rx.sorting.min.js': ['dist/rx.sorting.js'] }
+         }
+       },
+-      qunit: {
+-          all: ['tests/*.html']
+-      },
+-      jshint: {
+-        all: [
+-          'rx.all.js'
+-        ]
+-      },
+-      jscs: {
+-        src: 'src/**/*.js',
+-        options: {
+-          config: '.jscsrc'
+-        }
+-      },
+-      watch: {
+-        scripts: {
+-          files: 'src/**/*.js',
+-          tasks: ['default'],
+-          options: {
+-            interrupt: true
+-          }
+-        }
+-      },
+       copy: {
+         'lite': {
+           flatten: true,
+@@ -2940,7 +2917,6 @@ module.exports = function (grunt) {
+     'copy:core-binding',
+     'copy:core-testing',
+ 
+-    'qunit',
+ 	'rebuild-ts'
+   ]);
+ };

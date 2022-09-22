@@ -1,0 +1,4 @@
+# the filename contains '.lite' but it is really a source file
+node-rx source: source-contains-prebuilt-javascript-object src/core/observer-lite.js
+node-rx source: source-contains-prebuilt-javascript-object src/modular/rx.lite.js
+node-rx source: source-is-missing src/modular/rx.lite.js

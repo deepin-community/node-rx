@@ -1,0 +1,20 @@
+Description: Avoid the dependency on load-grunt-tasks by manually load
+ all required grunt tasks.
+Forwarded: not-needed
+Author: Paolo Greppi <paolo.greppi@libpf.com>
+
+Index: node-rx/Gruntfile.js
+===================================================================
+--- node-rx.orig/Gruntfile.js
++++ node-rx/Gruntfile.js
+@@ -2469,7 +2469,9 @@ module.exports = function (grunt) {
+   });
+ 
+   // Load all "grunt-*" tasks
+-  require('load-grunt-tasks')(grunt);
++  grunt.loadNpmTasks('grunt-contrib-copy', '/usr/lib/nodejs');
++  grunt.loadNpmTasks('grunt-contrib-uglify', '/usr/lib/nodejs');
++  grunt.loadNpmTasks('grunt-contrib-concat', '/usr/lib/nodejs');
+ 
+   function createNuGetPackage(nuspec) {
+     var done = this.async();

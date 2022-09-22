@@ -1,0 +1,4 @@
+index.js usr/lib/nodejs/rx/
+package.json usr/lib/nodejs/rx/
+dist usr/lib/nodejs/rx/
+modules usr/lib/nodejs/rx/

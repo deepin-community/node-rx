@@ -1,0 +1,5 @@
+version=3
+opts=repacksuffix=+dfsg1,\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-rx-$1.tar.gz/ \
+ https://github.com/Reactive-Extensions/RxJS/tags .*/archive/v?([\d\.]+).tar.gz

@@ -1,0 +1,42 @@
+Source: node-rx
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Build-Depends:
+ debhelper (>= 9)
+ , dh-buildinfo
+ , node-grunt-cli
+ , grunt
+ , node-grunt-contrib-copy
+ , node-grunt-contrib-uglify
+ , node-grunt-contrib-concat
+ , nodejs
+Standards-Version: 3.9.8
+Homepage: https://github.com/Reactive-Extensions/RxJS
+Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-rx.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-rx.git
+
+Package: node-rx
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+Description: Reactive Extensions for JavaScript, Node.js module
+ A set of libraries to compose asynchronous and event-based
+ programs using observable collections andArray#extras style
+ composition in JavaScript.
+ .
+ This is the Node.js module.
+ .
+ Node.js is an event-based server-side JavaScript engine.
+
+Package: libjs-rx
+Architecture: all
+Depends: ${misc:Depends}
+Description: Reactive Extensions for JavaScript
+ A set of libraries to compose asynchronous and event-based
+ programs using observable collections andArray#extras style
+ composition in JavaScript.
+ .
+ This is the pure-JavaScript library.
